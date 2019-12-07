@@ -1,0 +1,51 @@
+<table border = 1> 
+	<tr> 
+		<th>x</th> 
+		<th>y</th> 
+		<th>unique_squi_id</th> 
+		<th>Shift</th> 
+		<th>Date</th> 
+		<th>Age</th> 
+		<th>primary_fur_color</th> 
+		<th>Location</th> 
+		<th>specific_location</th> 
+		<th>running</th> 
+		<th>Chasing</th> 
+		<th>Climbing</th> 
+		<th>Eating</th> 
+		<th>Foraging</th> 
+		<th>other_activities</th> 
+		<th>Kuks</th> <
+		<th>Quaas</th> 
+		<th>Moans</th> 
+		<th>tail_flags</th> 
+		<th>tail_twitches</th> 
+		<th>approaches</th> 
+		<th>indifferent</th> 
+		<th>runs_from</th> </tr> 
+	{% for item in squi_list %} 
+	<tr> 
+		<td>{{ item.x }}</td> 
+		<td>{{ item.y }}</td> 
+		<td><a href="/sightings/{{ item.unique_squi_id }}/">{{ item.unique_squi_id }}</a></td> 
+		<td>{{ item.Shift }}</td>
+		<td>{{ item.Date }}</td> 
+		<td>{{ item.Age }}</td> 
+		<td>{{ item.primary_fur_color }}</td> 
+		<td>{{ item.Location }}</td> 
+		<td>{{ item.specific_location }}</td> 
+		<td>{{ item.running }}</td> 
+		<td>{{ item.Chasing }}</td> 
+		<td>{{ item.Climbing }}</td> 
+		<td>{{ item.Eating }}</td> 
+		<td>{{ item.Foraging }}</td> 
+		<td>{{ item.other_activities }}</td> 
+		<td>{{ item.Kuks}}</td> 
+		<td>{{ item.Quaas }}</td> 
+		<td>{{ item.Moans }}</td> 
+		<td>{{ item.tail_flags }}</td> 
+		<td>{{ item.tail_twitches }}</td> 
+		<td>{{ item.Approaches }}</td>
+		<td>{{ item.indifferent }}</td>
+		<td>{{ item.runs_from }}</td>
+	{% endfor %}
