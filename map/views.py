@@ -34,7 +34,7 @@ def index(request):
             fill_opacity = 0.7, line_opacity = 0.2)
     return HttpResponse(m.get_root().render())
 
-
+print("hi")
 
 
 #Create your views here.
