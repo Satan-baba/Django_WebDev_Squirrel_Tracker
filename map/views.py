@@ -35,6 +35,6 @@ def index(request):
     return HttpResponse(m.get_root().render())
 
 print("hi")
-
+print("double hi")
 
 #Create your views here.
