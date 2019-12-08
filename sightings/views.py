@@ -8,8 +8,8 @@ from django.db import models
 from django.template import loader
 from django.http import HttpResponse
 from django.forms import modelformset_factory
-
 from .forms import SightForm
+from django.http import HttpResponseRedirect
 
 def index(request):
     squi_list = Sight.objects.order_by('id')
@@ -20,25 +20,13 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def second(request, unique_squi_id):
-    try:
-        row = Sight.objects.get(unique_squi_id = unique_squi_id)
-    except:
-        raise Http404("Does not exists")
-
-    return render(request, 'sightings/second.html', {'row':row})
-# Create your views here
-
 def add(request):
     if request.method == 'POST':
         form = SightForm(request.POST)
         if form.is_valid():
-            x = form.x
-            
+            form.save()
             return HttpResponseRedirect('/sightings/')
     else:
-            form = SightForm()
-            
+        form = SightForm()
 
-    return render(request, 'sightings/add2.html', {'form': form})
-
+    return render(request, 'sightings/add.html', {'form':form})
