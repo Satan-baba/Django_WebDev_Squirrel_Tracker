@@ -51,8 +51,8 @@
         <!-- L.Icon.Default.prototype.options.shadowAnchor = [0, 0]; -->
         {% for sighting in sightings %}
           var point_lat_lon = [{{ sighting.y }}, {{ sighting.x }}];
-          var marker = L.marker(point_lat_lon).addTo(map);
-        {% endfor %}
+	  var marker = L.marker(point_lat_lon).bindPopup( '<p>' + "Latitude: "+ {{sighting.y}} +"</p>"+ '<p>'+ "Longitude: "+ {{sighting.x}}  + '</p>' ).addTo(map);
+	 {% endfor %}
     </script>
   </body>
 </html>
