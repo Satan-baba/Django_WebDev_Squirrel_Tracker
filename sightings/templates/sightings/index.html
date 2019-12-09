@@ -1,51 +1,57 @@
-<table border = 1> 
-	<tr> 
-		<th>x</th> 
-		<th>y</th> 
-		<th>unique_squi_id</th> 
-		<th>Shift</th> 
-		<th>Date</th> 
-		<th>Age</th> 
-		<th>primary_fur_color</th> 
-		<th>Location</th> 
-		<th>specific_location</th> 
-		<th>running</th> 
-		<th>Chasing</th> 
-		<th>Climbing</th> 
-		<th>Eating</th> 
-		<th>Foraging</th> 
-		<th>other_activities</th> 
-		<th>Kuks</th> <
-		<th>Quaas</th> 
-		<th>Moans</th> 
-		<th>tail_flags</th> 
-		<th>tail_twitches</th> 
-		<th>approaches</th> 
-		<th>indifferent</th> 
-		<th>runs_from</th> </tr> 
-	{% for item in squi_list %} 
-	<tr> 
-		<td>{{ item.x }}</td> 
-		<td>{{ item.y }}</td> 
-		<td><a href="/sightings/{{ item.unique_squi_id }}/">{{ item.unique_squi_id }}</a></td> 
-		<td>{{ item.Shift }}</td>
-		<td>{{ item.Date }}</td> 
-		<td>{{ item.Age }}</td> 
-		<td>{{ item.primary_fur_color }}</td> 
-		<td>{{ item.Location }}</td> 
-		<td>{{ item.specific_location }}</td> 
-		<td>{{ item.running }}</td> 
-		<td>{{ item.Chasing }}</td> 
-		<td>{{ item.Climbing }}</td> 
-		<td>{{ item.Eating }}</td> 
-		<td>{{ item.Foraging }}</td> 
-		<td>{{ item.other_activities }}</td> 
-		<td>{{ item.Kuks}}</td> 
-		<td>{{ item.Quaas }}</td> 
-		<td>{{ item.Moans }}</td> 
-		<td>{{ item.tail_flags }}</td> 
-		<td>{{ item.tail_twitches }}</td> 
-		<td>{{ item.Approaches }}</td>
-		<td>{{ item.indifferent }}</td>
-		<td>{{ item.runs_from }}</td>
-	{% endfor %}
+<h1>This is a list of all sightings</h1>
+<h2>Click on Unique Squirrel ID to Edit</h2>
+<h2><a href = "/sightings/add/">Click Here to add data</a></h2>
+<table border = 1>
+    <tr>
+        <th>x</th>
+	<th>y</th>
+	<th>unique_squirrel_id</th>
+	<th>shift</th>
+	<th>date</th>
+	<th>age</th>
+	<th>primary_fur_color</th>
+	<th>location</th>
+	<th>specific_location</th>
+	<th>running</th>
+	<th>chasing</th>
+	<th>climbing</th>
+	<th>eating</th>
+	<th>foraging</th>
+	<th>other_activities</th>
+	<th>kuks</th>
+	<th>quaas</th>
+	<th>moans</th>
+	<th>tail_flags</th>
+	<th>tail_twitches</th>
+	<th>approaches</th>
+	<th>indifferent</th>
+	<th>runs_from</th>
+    </tr>
+    {% for item in squi_list %}
+    <tr> 
+        <td>{{ item.x }}</td>
+	<td>{{ item.y }}</td>
+	<td><a href="/sightings/{{ item.unique_squirrel_id }}/">{{ item.unique_squirrel_id }}</a></td>
+	<td>{{ item.shift }}</td>
+	<td>{{ item.date }}</td>
+	<td>{{ item.age }}</td>
+	<td>{{ item.primary_fur_color }}</td>
+	<td>{{ item.location }}</td>
+	<td>{{ item.specific_location }}</td>
+	<td>{{ item.running }}</td>
+	<td>{{ item.chasing }}</td>
+	<td>{{ item.climbing }}</td>
+	<td>{{ item.eating }}</td>
+	<td>{{ item.foraging }}</td>
+	<td>{{ item.other_activities }}</td>
+	<td>{{ item.kuks}}</td>
+	<td>{{ item.quaas }}</td>
+	<td>{{ item.moans }}</td>
+	<td>{{ item.tail_flags }}</td>
+	<td>{{ item.tail_twitches }}</td>
+	<td>{{ item.approaches }}</td>
+	<td>{{ item.indifferent }}</td>
+        <td>{{ item.runs_from }}</td>
+    </tr>
+    {% endfor %}
+</table>
