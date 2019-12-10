@@ -112,7 +112,7 @@ def stats(request):
     axs[1,0].tick_params(axis='both', which='major', labelsize=20)
 
     axs[1,1].bar(x_cha, height=y_cha, color=(1, 0.7, 0))
-    axs[1,1].set_xlabel('Chasingi squirrels', fontsize=25)
+    axs[1,1].set_xlabel('Chasing squirrels', fontsize=25)
     axs[1,1].set_ylabel('Frequency of sightings', fontsize=25)
     axs[1,1].tick_params(axis='both', which='major', labelsize=20)
 
