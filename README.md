@@ -2,7 +2,7 @@
 
 This is a squirrel tracking app that allows you to add and edit sightings. Moreover, it also shows a map with all the sightings and displyas basic stats about the sightings.
 
-
+![Everybody loves Squirrels, even Spongebob!](https://miro.medium.com/max/407/1*prGLOttfFsJ49Vyehy2NSg.gif)
 ## Usage
 
 On the homepage, the user can either view a list of all sigthings or view the map that plots all squirrel locations.
