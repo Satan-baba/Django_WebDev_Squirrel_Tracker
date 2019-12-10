@@ -8,9 +8,13 @@ from django.db import models
 from django.template import loader
 from django.http import HttpResponseRedirect
 from django.forms import modelformset_factory
+
+from .models import Sight
+
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 from .forms import SightForm
+from django.http import HttpResponseRedirect
 
 def index(request):
     squi_list = Sight.objects.order_by('id')
@@ -20,6 +24,8 @@ def index(request):
         'squi_list': squi_list,
     }
     return HttpResponse(template.render(context, request))
+
+
 
 
 def s_id(request, user_id):
@@ -36,6 +42,7 @@ def s_id(request, user_id):
 
 
 
+
 def add(request):
     if request.method == 'POST':
         form = SightForm(request.POST)
@@ -45,8 +52,8 @@ def add(request):
     else:
         form = SightForm()
 
+
+
     return render(request, 'sightings/add.html', {'form':form})
-
-
 
 

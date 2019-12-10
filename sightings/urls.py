@@ -9,3 +9,4 @@ urlpatterns = [
     re_path(r'(?P<user_id>[0-9]+[A-Z]-[A-Z]{2}-[0-9]{4}-[0-9]{2})/', views.s_id, name='user_id'),
     ]
 
+
