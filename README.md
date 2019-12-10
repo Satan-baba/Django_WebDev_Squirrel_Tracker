@@ -31,3 +31,17 @@ To import all data in database from a csv file:
 python manage.py import squirrel_data /path/to/file.csv
 ```
 This command takes in data from a csv file and puts it in the database
+
+
+## Team details
+
+Project Group 9, Section 1
+
+## List of UNIS
+
+UNIs: [la2798,ppc2115]
+
+## link to the server running your application:
+
+https://model-axle-255421.appspot.com/
+
