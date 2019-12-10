@@ -2,6 +2,7 @@
 
 This is a squirrel tracking app that allows you to add and edit sightings. Moreover, it also shows a map with all the sightings and displyas basic stats about the sightings.
 
+
 ## Usage
 
 On the homepage, the user can either view a list of all sigthings or view the map that plots all squirrel locations.
