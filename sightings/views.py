@@ -56,30 +56,32 @@ def add(request):
     return render(request, 'sightings/add.html', {'form':form})
 
 def stats(request):
-    squirrels=pd.read_csv('file.csv')
+    s= Sight.objects.all().values()
+    #squirrels = pd.read_csv("file.csv")
+    squirrels=pd.DataFrame(s)
 
-    x_age = squirrels['age'].value_counts().index
+    x_age = ['Adult','Juvenile','Unknown']
     y_age = squirrels['age'].value_counts()
 
-    x_fur = squirrels['primary_fur_color'].value_counts().index
+    x_fur = ['Gray','Cinnamon','Black','Unknown']
     y_fur = squirrels['primary_fur_color'].value_counts()
 
-    x_loc = squirrels['location'].value_counts().index
+    x_loc = ['Ground Plane','Above Ground','Unknown']
     y_loc = squirrels['location'].value_counts()
 
     x_shift = squirrels['shift'].value_counts().index
     y_shift = squirrels['shift'].value_counts()
 
-    x_run = squirrels['running'].value_counts().index
+    x_run = ['False','True']
     y_run = squirrels['running'].value_counts()
 
-    x_cha = squirrels['chasing'].value_counts().index
-    y_cha = squirrels['chasing'].value_counts()
+    x_cha = ['False','True']
+    y_cha = squirrels['foraging'].value_counts()
 
-    x_cli = squirrels['climbing'].value_counts().index
+    x_cli = ['False','True']
     y_cli = squirrels['climbing'].value_counts()
 
-    x_eat = squirrels['eating'].value_counts().index
+    x_eat = ['False','True']
     y_eat = squirrels['eating'].value_counts()
 
     fig, axs = plt.subplots(2, 4, figsize=(30,15))
@@ -112,7 +114,7 @@ def stats(request):
     axs[1,0].tick_params(axis='both', which='major', labelsize=20)
 
     axs[1,1].bar(x_cha, height=y_cha, color=(1, 0.7, 0))
-    axs[1,1].set_xlabel('Chasing squirrels', fontsize=25)
+    axs[1,1].set_xlabel('Foraging squirrels', fontsize=25)
     axs[1,1].set_ylabel('Frequency of sightings', fontsize=25)
     axs[1,1].tick_params(axis='both', which='major', labelsize=20)
 
