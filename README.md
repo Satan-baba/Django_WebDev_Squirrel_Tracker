@@ -1,8 +1,8 @@
-#Squirrel Tracker
+# Squirrel Tracker
 
 This is a squirrel tracking app that allows you to add and edit sightings. Moreover, it also shows a map with all the sightings and displyas basic stats about the sightings.
 
-##Usage
+## Usage
 
 On the homepage, the user can either view a list of all sigthings or view the map that plots all squirrel locations.
 
@@ -15,7 +15,7 @@ In addition, there is a link to add new entries on the sightings index page. Thi
 If there is an edit in the latitude/longitude of the sighting, it is directly reflected in the map
 If there is an addtion to the data and a new row is added, a new marker could be immediately seen on the map
 
-##Importing and exporting data
+## Importing and exporting data
 
 to export all the data in csv format:
 
